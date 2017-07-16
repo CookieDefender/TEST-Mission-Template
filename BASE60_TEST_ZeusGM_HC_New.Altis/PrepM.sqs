@@ -1,0 +1,77 @@
+_unit = _this select 0;
+_Selfpod = "TEI_HEV" createVehicle [0,0,10000];
+_Selfpod setPos [getmarkerPos "SelfDrop" select 0, getmarkerPos "SelfDrop" select 1, 1000];
+_Selfpod setdir (random 360);
+_unit moveindriver _Selfpod;
+_attach = createVehicle ["Sign_Sphere10cm_F", [0,0,10000], [], 0, ""];
+_attach hideObjectGlobal true;
+_attach attachto [_Selfpod,[0,0,0]];
+detach _attach;
+_attach setdir (getdir _Selfpod);
+_Selfpod attachto [_attach,[0,0,0]];
+_Selfpod setdir 180;
+_Selfpod setVectorUp [0,0,1];
+deletemarker "SelfDrop";
+hint "Friendly ODST Inbound";
+
+_a = (random 60)-30
+_b = (random 60)-30
+_c = (random 60)-30
+_d = (random 60)-30
+_e = (random 60)-30
+_f = (random 60)-30
+_g = (random 60)-30
+_h = (random 60)-30
+_i = (random 60)-30
+_j = (random 60)-30
+_k = (random 60)-30
+_l = (random 60)-30
+_t1 = (random 0.8)+0.2
+_t2 = (random 0.8)+0.2
+_t3 = (random 0.8)+0.2
+_t4 = (random 0.8)+0.2
+_t5 = (random 0.8)+0.2
+
+~5
+_AIpod1 = "TEI_HEV" createVehicle [0,0,10000];
+_AIpod1 setPos (getmarkerPos "AIDrop" vectorAdd [_a,_b,1000]);
+_AIpod1 setdir (random 360);
+_AI1 = (group _unit) createUnit ["TEI_UNSC_ODST_Rifleman_AT", [0,0,10000], [], 20, "FORM"];
+_AI1 moveindriver _AIpod1;
+[_AIPod1, _AI1] spawn TEI_HEV_fnc_podLaunchAI;
+~_t1
+_AIpod2 = "TEI_HEV" createVehicle [0,0,10000];
+_AIpod2 setPos (getmarkerPos "AIDrop" vectorAdd [_c,_d,1000]);
+_AIpod2 setdir (random 360);
+_AI2 = (group _unit) createUnit ["TEI_UNSC_ODST_Rifleman_BR", [0,0,10000], [], 20, "FORM"];
+_AI2 moveindriver _AIpod2;
+[_AIPod2, _AI2] spawn TEI_HEV_fnc_podLaunchAI;
+~_t2
+_AIpod3 = "TEI_HEV" createVehicle [0,0,10000];
+_AIpod3 setPos (getmarkerPos "AIDrop" vectorAdd [_e,_f,1000]);
+_AIpod3 setdir (random 360);
+_AI3 = (group _unit) createUnit ["TEI_UNSC_ODST_Scout_Sniper", [0,0,10000], [], 20, "FORM"];
+_AI3 moveindriver _AIpod3;
+[_AIPod3, _AI3] spawn TEI_HEV_fnc_podLaunchAI;
+~_t3
+_AIpod4 = "TEI_HEV" createVehicle [0,0,10000];
+_AIpod4 setPos (getmarkerPos "AIDrop" vectorAdd [_g,_h,1000]);
+_AIpod4 setdir (random 360);
+_AI4 = (group _unit) createUnit ["TEI_UNSC_ODST_Paramedic", [0,0,10000], [], 20, "FORM"];
+_AI4 moveindriver _AIpod4;
+[_AIPod4, _AI4] spawn TEI_HEV_fnc_podLaunchAI;
+~_t4
+_AIpod5 = "TEI_HEV" createVehicle [0,0,10000];
+_AIpod5 setPos (getmarkerPos "AIDrop" vectorAdd [_i,_j,1000]);
+_AIpod5 setdir (random 360);
+_AI5 = (group _unit) createUnit ["TEI_UNSC_ODST_Autorifleman", [0,0,10000], [], 20, "FORM"];
+_AI5 moveindriver _AIpod5;
+[_AIPod5, _AI5] spawn TEI_HEV_fnc_podLaunchAI;
+~_t5
+_AIpod6 = "TEI_HEV" createVehicle [0,0,10000];
+_AIpod6 setPos (getmarkerPos "AIDrop" vectorAdd [_k,_l,1000]);
+_AIpod6 setdir (random 360);
+_AI6 = (group _unit) createUnit ["TEI_UNSC_ODST_Demo", [0,0,10000], [], 20, "FORM"];
+_AI6 moveindriver _AIpod6;
+[_AIPod6, _AI6] spawn TEI_HEV_fnc_podLaunchAI;
+deletemarker "AIDrop";
