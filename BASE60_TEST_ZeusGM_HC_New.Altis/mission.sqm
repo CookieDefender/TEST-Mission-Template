@@ -8,7 +8,7 @@ class EditorData
 	toggles=521;
 	class ItemIDProvider
 	{
-		nextID=396;
+		nextID=397;
 	};
 	class MarkerIDProvider
 	{
@@ -16,10 +16,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={23679.563,356.95493,15924.12};
-		dir[]={-0.18116327,-0.93198478,0.31412548};
-		up[]={-0.46562287,0.36242816,0.80736136};
-		aside[]={0.86629862,-1.182314e-006,0.49961433};
+		pos[]={23613.76,78.583199,16290.69};
+		dir[]={-0.80618989,-0.51766962,-0.28662395};
+		up[]={-0.48792738,0.85546988,-0.1734717};
+		aside[]={-0.33500028,2.4854671e-007,0.9422605};
 	};
 };
 binarizationWanted=0;
@@ -53,13 +53,14 @@ addons[]=
 	"ace_medical",
 	"ace_medical_menu",
 	"ace_weather",
-	"alive_sys_aiskill"
+	"alive_sys_aiskill",
+	"acex_sitting"
 };
 class AddonsMetaData
 {
 	class List
 	{
-		items=29;
+		items=30;
 		class Item0
 		{
 			className="task_force_radio_items";
@@ -256,6 +257,13 @@ class AddonsMetaData
 			className="ALiVE_sys_aiskill";
 			name="alive_sys_aiskill";
 			author="ALiVE Mod Team";
+		};
+		class Item29
+		{
+			className="acex_sitting";
+			name="ACEX - Sitting";
+			author="ACE-Team";
+			url="http://ace3mod.com/";
 		};
 	};
 };
@@ -983,7 +991,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=75;
+		items=76;
 		class Item0
 		{
 			dataType="Logic";
@@ -10886,6 +10894,39 @@ class Mission
 					};
 				};
 				nAttributes=19;
+			};
+		};
+		class Item75
+		{
+			dataType="Logic";
+			class PositionInfo
+			{
+				position[]={23642.293,6.8975148,16013.84};
+			};
+			id=396;
+			type="ACEX_ModuleSitting";
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="ACEX_ModuleSitting_enable";
+					expression="_this setVariable ['enable',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=1;
+						};
+					};
+				};
+				nAttributes=1;
 			};
 		};
 	};
