@@ -25,3 +25,10 @@ OnLoadMission = "Zeus Mission Template";
 loadScreen = "logo.jpg";
 
 #include "R3F_LOG\desc_include.h"
+class ACE_Settings {
+  /*   Run potato briefings at start up   */
+  class potato_briefing_brief_addCredits {
+    typeName = "BOOL";
+    value = 1;
+  };
+};
