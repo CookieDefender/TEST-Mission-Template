@@ -1,3 +1,10 @@
+class CfgDebriefingSections {
+	class acex_killTracker {
+		title = "Acex Killed Events";
+		variable = "acex_killTracker_outputText";
+	};
+};
+
 #include "ATM_airdrop\dialog.hpp"
 
 class CfgSounds
@@ -11,5 +18,10 @@ class CfgSounds
 };
 
 enableDebugConsole = 1;
+DisabledAI = true;
+onLoadName = "Zeus Mission Template";
+author = CookieDefender;
+OnLoadMission = "Zeus Mission Template";
+loadScreen = "logo.jpg";
 
 #include "R3F_LOG\desc_include.h"
