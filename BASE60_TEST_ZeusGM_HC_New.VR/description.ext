@@ -13,3 +13,18 @@ class CfgSounds
 enableDebugConsole = 1;
 
 #include "R3F_LOG\desc_include.h"
+
+class CfgDebriefingSections {
+	class acex_killTracker {
+		title = "Acex Killed Events";
+		variable = "acex_killTracker_outputText";
+	};
+};
+
+class ACE_Settings {
+  /*   Run potato briefings at start up   */
+  class potato_briefing_brief_addCredits {
+    typeName = "BOOL";
+    value = 1;
+  };
+};
