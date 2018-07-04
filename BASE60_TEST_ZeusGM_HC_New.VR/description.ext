@@ -28,3 +28,9 @@ class ACE_Settings {
     value = 1;
   };
 };
+
+//wolfplug
+class cfgFunctions
+{
+	#include "functions\functions.hpp"
+};
